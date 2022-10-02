@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2? família= Fonte+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900 & display=trocar');
+
+
+.ListAmounts {
+    width: 220px;
+}
+
+
+.ListAmounts > ul {
+    list-style: none;
+    width: 140px;
+    height: 194.47px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ListAmounts > ul > h2 {
+    font-size: 15px;
+    color: #3D75BB;
+    font-family: "FonteSansPro", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    border-bottom: 1px solid #5D9CEC;
+    display: flex;
+}
+
+.ListAmounts > ul > li {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+
+}
+
+.ListAmounts > ul > li  >h3 {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 3.5px;
+    margin: 0;
+
+    font-family: "FonteSansPro", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #5D9CEC;
+}
+
+.ListAmounts > ul > li  > p {
+    font-size: 13px;
+    font-weight: 500;
+
+    font-family: "FonteSansPro", sans-serif;
+    font-weight: 800;
+    color: #5D9CEC;
+}
