@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2? família= Fonte+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900 & display=trocar');
+
+.signupFormAmount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 33.5801px 17.5897px;
+    justify-content: center;
+    gap: 17.59px;
+    width: 377.83px;
+    height: 320px;
+    background: #FFFFFF;
+    border-radius: 3.199812px;
+}
+
+.signupFormAmount > h1 {
+    font-size: 24px;
+    color: #656565;
+    margin-left: 20px;
+    font-family: "FonteSansPro", sans-serif;
+}
+
+.signupFormAmount > div {
+    width: 260px;
+}
+
+.signupFormAmount > div > label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 16.41px;
+    font-family: "FonteSansPro", sans-serif;
+    color: #656565;
+    display: flex;
+}
+
+.signupFormAmount > div > span {
+    font-size: 10px;
+    margin-top: 2px;
+    font-family: "FonteSansPro", sans-serif;
+    display: flex;
+}
+
+.signupFormAmount > div > input {
+    width: 251px;
+    height: 37px;
+    color: #000000;
+}
+
+.signupFormAmount > button {
+    margin-bottom: 12px;
+    position: absolute;
+    border: 1px solid #D1DCE3;
+    border-radius: 60%;
+    margin-top: 400px;
+    width: 100px;
+    height: 30px;
+    background: #ffff;
+}
