@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import React from "react";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import api from "../../service/api";
 import * as yup from "yup";
@@ -16,8 +16,9 @@ function Form({listAmounts, setListAmounts}) {
     const [installments, setInstallments]    = useState(0);
     const [mdr, setMdr]                      = useState(0);
 
-    const [inOn, setInOn] = useState(false);
+    const [inOn, setInOn]   = useState(false);
     const [modal, setModal] = useState("containerModal hidden");
+    const [img, setImg]     = useState("");
 
     const formSchema = yup.object().shape({
         amount: yup
@@ -71,9 +72,16 @@ function Form({listAmounts, setListAmounts}) {
             setListAmounts(response.data);
         })
         .catch((err) => {
-
+            console.log(err)
             if (err.message == "Request failed with status code 408") {
-                showModal()
+                const status408 = "https://httpcats.com/408.jpg"
+                showModal(status408)
+                // console.log("TimeOut")
+            }
+
+            if (err.message == "Request failed with status code 500") {
+                const status500 = "https://httpcats.com/500.jpg"
+                showModal(status500)
                 // console.log("TimeOut")
             }
 
@@ -81,10 +89,11 @@ function Form({listAmounts, setListAmounts}) {
         })
     }
 
-    const showModal = () => {
+    const showModal = (status) => {
         console.log("TimeOut")
         if( inOn === false ) {
             setInOn(true);
+            setImg(status)
             return setModal("containerModal")
         } else {
             setInOn(false);
@@ -106,7 +115,7 @@ function Form({listAmounts, setListAmounts}) {
                         <h1>Algo deu Errado : (</h1>
                         <button className="removedModal" onClick={() => removeModal()}>x</button>
                     </div>
-                    <img src="https://httpcats.com/408.jpg" alt="status erro 408" />
+                    <img src={img} alt="status erro 408" />
                 </div>
             </section>
             <form className="signupFormAmount" onSubmit={handleSubmit(onRegister)}>
