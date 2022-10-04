@@ -56,3 +56,93 @@
     height: 30px;
     background: #ffff;
 }
+
+
+
+.containerModal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+}
+
+.containerModal .modal{
+    width: 369px;
+    height: 342px;
+    border: solid 1px;
+    background-color: white;
+    position: relative;
+    border-radius: 4px;
+    gap: 22px;
+
+    background: #212529;
+
+    box-shadow: 0px 4px 40px -10px 
+    rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.containerModal .modal button.removedModal{
+    color: #868E96;
+    background: none;
+    border: none;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    position: absolute;
+   
+    width: 11px;
+    height: 26px;
+    top: 8px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.modalHeader {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 20px;
+
+    /*position: absolute;*/
+    width: 369px;
+    height: 50px;
+    box-sizing: border-box;
+
+    background: #343B41;
+    border-radius: 4px 4px 0px 0px;
+  
+}
+
+.modalHeader > h1 {
+
+    width: 150px;
+    height: 24px;
+    margin-top: 12px;
+    margin-left: 20px;
+    align-items: center;
+
+    font-family: "FonteSansPro", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2px;
+
+    color: #F8F9FA;
+
+}
+
+.modal > img {
+    width: 315px;
+    padding: 10px;
+}
+
